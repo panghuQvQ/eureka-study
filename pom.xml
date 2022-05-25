@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.wang</groupId>
+    <artifactId>eureka-study</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>eureka-study</name>
+    <description>eureka-study</description>
+
+    <!--
+    项目的打包类型：pom、jar、war（默认jar类型）
+    pom：父类型都是pom类型
+    jar：内部调用或者是做服务使用
+    war：打包项目，用于容器（Tomcat、Jetty等）上部署
+    pom的意思是项目里没有java代码，也不执行任何代码，只是为了聚合工程或传递依赖用的。所以并不会寻找配置文件，若想配置文件生效，改为jar
+    -->
+    <packaging> pom</packaging>
+
+
+    <modules>
+        <module>parent</module>
+        <module>eureka-server</module>
+        <module>eureka-server02</module>
+        <module>service-provider</module>
+        <module>service-provider02</module>
+        <module>service-consumer</module>
+    </modules>
+
+</project>
