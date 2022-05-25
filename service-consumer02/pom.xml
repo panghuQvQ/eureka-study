@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wang</groupId>
-    <artifactId>service-provider</artifactId>
+    <artifactId>service-consumer02</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>service-provider</name>
-    <description>service-provider</description>
+    <name>service-consumer02</name>
+    <description>service-consumer02</description>
 
     <parent>
         <groupId>com.wang</groupId>
@@ -19,7 +19,6 @@
         -->
         <relativePath>../parent</relativePath>
     </parent>
-
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -35,14 +34,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
-        <!--添加 spring-boot-starter-actuator依赖，实现Eureka优雅停服-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -61,6 +54,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>
