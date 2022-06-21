@@ -27,6 +27,7 @@
         <module>service-provider02</module>
         <module>service-consumer</module>
         <module>service-consumer02</module>
+        <module>service-gateway</module>
     </modules>
 
 </project>
