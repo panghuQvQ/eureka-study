@@ -8,9 +8,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>service-gateway</name>
     <description>service-gateway</description>
-    <properties>
-        <java.version>11</java.version>
-    </properties>
+    <packaging>${packaging.type}</packaging>
+
 
     <parent>
         <groupId>com.wang</groupId>

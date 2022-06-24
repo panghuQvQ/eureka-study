@@ -11,14 +11,16 @@ spring:
         - id: service-provider            # 路由 ID ，唯一
           uri: lb://service-provider      # lb:// 根据服务名称从注册中心获取服务请求地址
           predicates:                     # 断言（判定条件）
-#             - Path=/api-gateway/**   # 匹配对应 URL 的请求，将匹配到的请求追加在目标 URL 之后
+             - Path=/api-gateway/**   # 匹配对应 URL 的请求，将匹配到的请求追加在目标 URL 之后
 #            - Path=/**   # 匹配对应 URL 的请求，将匹配到的请求追加在目标 URL 之后
-            - Path=/api/product/{segment}   # 匹配对应 URL 的请求，将匹配到的请求追加在目标 URL 之后
+#            - Path=/api/product/{segment}   # 匹配对应 URL 的请求，将匹配到的请求追加在目标 URL 之后
           filters:                    # 网关过滤器
-#            - RewritePath=/api-gateway(?<segment>/?.*), $\{segment}    # 重写路径，将 /api-gateway/product/list 重写为 /product/list
+            - RewritePath=/api-gateway(?<segment>/?.*), $\{segment}    # 重写路径，将 /api-gateway/product/list 重写为 /product/list
 #            - PrefixPath=/product    # 添加前缀，将 /list 重写为 /product/list
 #            - StripPrefix=2    # 除去前缀，将 /api/123/product/list 重写为 /product/list
-            - SetPath=/product/{segment}    # 设置路径，将 /api/product/list 重写为 /product/list
+#            - SetPath=/product/{segment}    # 设置路径，将 /api/product/list 重写为 /product/list
+#            - AddRequestParameter=flag,1    # 在下游请求中添加 flag = 1
+#            - SetStatus=500    # 任何情况下，响应的 HTTP 状态都将设置为 404
 
 
 # 配置 Eureka Server 注册中心

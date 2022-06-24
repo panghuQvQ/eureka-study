@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>service-consumer02</name>
     <description>service-consumer02</description>
+    <packaging>${packaging.type}</packaging>
 
     <parent>
         <groupId>com.wang</groupId>
@@ -19,9 +20,7 @@
         -->
         <relativePath>../parent</relativePath>
     </parent>
-    <properties>
-        <java.version>11</java.version>
-    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

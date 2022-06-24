@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>eureka-server</name>
     <description>eureka-server</description>
+    <packaging>${packaging.type}</packaging>
 
     <!--继承父依赖-->
     <parent>
@@ -21,9 +22,7 @@
         <relativePath>../parent</relativePath>
     </parent>
 
-    <properties>
-        <java.version>11</java.version>
-    </properties>
+
 
     <!--项目依赖-->
     <dependencies>

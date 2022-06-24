@@ -28,6 +28,7 @@
         <java.version>11</java.version>
         <!--spring-cloud 2021.0.2 版本依赖-->
         <spring-cloud.version>2021.0.2 </spring-cloud.version>
+        <packaging.type>jar</packaging.type>
     </properties>
 
     <!--项目依赖管理，父项目只是声明依赖，子项目需要写明需要的依赖（可以省略版本信息）-->
