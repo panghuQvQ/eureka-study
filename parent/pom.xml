@@ -25,6 +25,7 @@
            这样可以统一管理工程中用到的依赖版本
        -->
     <properties>
+        <!--指定JDK编译环境-->
         <java.version>11</java.version>
         <!--spring-cloud 2021.0.2 版本依赖-->
         <spring-cloud.version>2021.0.2 </spring-cloud.version>
